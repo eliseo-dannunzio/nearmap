@@ -13,3 +13,5 @@ Some caveats with regards to this task:
 6) There was a minor adjustment to the JSON file, basically setting it up as JavaScript variable; as I wasn't able to set up an AJAX call to the JSON; so I had it fed through by calling the JSON as a separate file.
 
 7) The one thing that did stump me momentarily is the bubble-up effect from clicking on the markers, which in turn passed through to the map, resulting in the map trigger function, hideInfo(). I realized I had to stop the click-event from propagating through using the $event.stopPropagation() function after the marker trigger had activated.
+
+8) An additional note: I decided to not use two frameworks in this technical test, having Angular in there was hard enough, so there was a fair bit of JavaScript in there, but you may notice that there is some jQuery like references in there; this is because Angular has a built-in plugin called jqLite, which borrows a number of jQuery methods for use within the Angular frameowrk...
