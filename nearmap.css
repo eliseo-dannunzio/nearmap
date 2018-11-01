@@ -1,0 +1,52 @@
+	/* Set up background map */
+	.mainmap {
+		background: url("./background-map.jpg");
+		width: 799px;
+		height: 599px;
+		position: relative;
+	}
+
+	/* Set up marker default */
+	.marker {
+		background: url("./marker.png");
+		width: 23px;
+		height: 37px;
+		position: absolute;
+		display: inline-block;
+		cursor: pointer;
+	}
+    
+	/* Marker when clicked */
+	.marker.clicked {
+		background: url("./marker-selected.png");
+	}
+	
+	/* Information display, defaults to not show information unless a marker is clicked */
+	.info {
+		font-family: Arial;
+		display: none;
+		background-color: rgb(255,255,255);
+		width: 250px;
+		height: 200px;
+		right: 0px;
+		top: 0px;
+		margin: 5px;
+		padding: 5px;
+		border-radius: 5px;
+		position: absolute;
+	}
+	
+	/* Displays the information when a marker is clicked */
+	.info.show {
+		display: block;
+	}
+
+	/* Information display's heading style */
+    .heading {
+        font-weight: bold;
+    }
+
+	/* Capitalizes the resulting value for each marker's data */
+    .capitalize {
+        text-transform: capitalize;
+    }
