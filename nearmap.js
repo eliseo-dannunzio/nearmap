@@ -21,7 +21,6 @@ myApp.controller('myAppList', function myAppList($scope) {
 
 	$scope.displayInfo = function(data) {
 		i = data["marker"]["index"];
-		console.log("marker"+i);
 		
 		angular.element(document.querySelectorAll('.marker')).removeClass('clicked');
 		angular.element(document.querySelector('#marker'+i)).addClass('clicked');
@@ -36,14 +35,12 @@ myApp.controller('myAppList', function myAppList($scope) {
 	}
 	
 	$scope.hideInfo = function() {
-	console.log("nana");
 		angular.element(document.querySelectorAll('.marker')).removeClass('clicked');
 		angular.element(document.querySelector('.info')).removeClass('show');	
 	}
 
 	$scope.myData = nearmap_data;
 	for (i = 0; i < $scope.myData.length; i++) {
-		console.log($scope.myData[i]["position"][0], $scope.myData[i]["position"][1]);
 		createMarker($scope.myData[i], i);
 	}
 });
